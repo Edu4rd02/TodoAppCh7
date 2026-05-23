@@ -4,7 +4,7 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2026-05-21T00:19:34.278885800Z">
+        <DropdownSelection timestamp="2026-05-23T20:06:13.097464700Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\josee\.android\avd\Pixel_7a.avd" />
@@ -41,6 +41,44 @@
         </DialogSelection>
       </SelectionState>
       <SelectionState runConfigName="addTask_withBlankInput_taskDoesNotAppear()">
+        <option name="selectionMode" value="DROPDOWN" />
+        <DropdownSelection timestamp="2026-05-21T00:19:34.278885800Z">
+          <Target type="DEFAULT_BOOT">
+            <handle>
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\josee\.android\avd\Pixel_7a.avd" />
+            </handle>
+          </Target>
+        </DropdownSelection>
+        <DialogSelection>
+          <targets>
+            <Target type="DEFAULT_BOOT">
+              <handle>
+                <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\josee\.android\avd\Pixel_7a.avd" />
+              </handle>
+            </Target>
+          </targets>
+        </DialogSelection>
+      </SelectionState>
+      <SelectionState runConfigName="TodoScreenTest">
+        <option name="selectionMode" value="DROPDOWN" />
+        <DropdownSelection timestamp="2026-05-21T00:19:34.278885800Z">
+          <Target type="DEFAULT_BOOT">
+            <handle>
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\josee\.android\avd\Pixel_7a.avd" />
+            </handle>
+          </Target>
+        </DropdownSelection>
+        <DialogSelection>
+          <targets>
+            <Target type="DEFAULT_BOOT">
+              <handle>
+                <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\josee\.android\avd\Pixel_7a.avd" />
+              </handle>
+            </Target>
+          </targets>
+        </DialogSelection>
+      </SelectionState>
+      <SelectionState runConfigName="taskCounter_updatesAfterAddingTask()">
         <option name="selectionMode" value="DROPDOWN" />
         <DropdownSelection timestamp="2026-05-21T00:19:34.278885800Z">
           <Target type="DEFAULT_BOOT">

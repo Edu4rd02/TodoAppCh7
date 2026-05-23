@@ -2,6 +2,10 @@ package com.example.todoappch7
 
 import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
+//import androidx.lifecycle.viewModelScope
+//import kotlinx.coroutines.Dispatchers
+//import kotlinx.coroutines.launch
+//import kotlinx.coroutines.withContext
 
 class TodoViewModel: ViewModel() {
     // _task is private and only this class can modify it
@@ -20,6 +24,14 @@ class TodoViewModel: ViewModel() {
 
     fun addTask(title:String){
         if (title.isNotBlank()){
+            // viewModelScope.launch start a new coroutine
+            // Everything inside this block WITHOUT blocking the main thread
+//            viewModelScope.launch{
+//                // withContext (Dispatcher.IO) switches to a background thread
+//                withContext(Dispatchers.IO){
+//                    simulateSlowOperation()
+//                }
+//            }
             _tasks.add(Task(nextId++,title = title.trim()))
         }
     }
@@ -37,4 +49,8 @@ class TodoViewModel: ViewModel() {
     fun containsTask(title: String): Boolean {
         return _tasks.any{ it.title == title }
     }
+
+//    private fun simulateSlowOperation(){
+//        Thread.sleep(3000) // Pause for 3 seconds -simulates a slow database query
+//    }
 }

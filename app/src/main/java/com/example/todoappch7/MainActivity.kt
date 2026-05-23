@@ -15,6 +15,8 @@ class MainActivity : ComponentActivity() {
     private val viewModel: TodoViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // This line causes the memory leak -- storing activity content in a static object
+        AppState.initialize(this.applicationContext) // 'this' = the activity short-lived, recreated on rotation
         enableEdgeToEdge()
         setContent {
             TodoAppCh7Theme {

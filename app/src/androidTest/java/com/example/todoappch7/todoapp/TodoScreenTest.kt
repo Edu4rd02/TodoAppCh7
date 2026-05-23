@@ -25,17 +25,17 @@ class TodoScreenTest {
     private lateinit var viewModel: TodoViewModel
 
     @Before
-    fun setUp(){
+    fun setUp() {
         viewModel = TodoViewModel()
 
         // Set the content to Display -- Same as MainActivity Does
-        composeTestRule.setContent{
+        composeTestRule.setContent {
             TodoScreen(viewModel = viewModel)
         }
     }
 
     @Test
-    fun addTask_userTypesAndClicksAdd_taskAppearsInList(){
+    fun addTask_userTypesAndClicksAdd_taskAppearsInList() {
         // Arrange - the setUp() already launched TodoScreen
 
         // Action -
@@ -76,6 +76,21 @@ class TodoScreenTest {
         // Assert - Verify the task was no added
         composeTestRule
             .onNodeWithText("0")
+            .assertIsDisplayed()
+    }
+
+    @Test
+    fun taskCounter_updatesAfterAddingTask() {
+        composeTestRule
+            .onNodeWithTag("input_field")
+            .performTextInput("Go to the cinema")
+
+        composeTestRule
+            .onNodeWithTag("add_button")
+            .performClick()
+
+        composeTestRule
+            .onNodeWithText("1")
             .assertIsDisplayed()
     }
 }
